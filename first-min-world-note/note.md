@@ -1,7 +1,8 @@
 ## first-min-world项目的笔记
 
 当前第一个项目：`first-min-world`
-技术栈：`next.js`
+技术栈：`next.js 16`
+react版本：`19.2.3`
 node环境：`v22.19.0`
 
 
@@ -22,3 +23,5 @@ node环境：`v22.19.0`
 ![步骤2-部署到vercel](./006.png)
 ![步骤2-部署到vercel](./007.png)
 ![步骤2-部署到vercel](./008.png)
+
+[markdown语法](https://juejin.cn/post/7404777095643627546?searchId=202512301419418537995511DC1FE9AC7D)

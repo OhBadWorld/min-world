@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+/* Tailwind v4：开启 class 模式的 dark 变体（基于 html.dark） */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 基础排版 */
+html,
+body,
+#app {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #fafafa;
+  color: #1f2937;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+html.dark body {
+  background: #0f1115;
+  color: #e5e7eb;
+}
+
+/* shiki 输出的代码块基础样式 */
+.demo-code pre {
+  margin: 0;
+  padding: 16px 18px;
+  font-size: 13.5px;
+  line-height: 1.6;
+  font-family: ui-monospace, "JetBrains Mono", Consolas, monospace;
+  overflow: auto;
+}
+
+/* shiki 多主题模式下，背景由 css 变量驱动 */
+.demo-code pre.shiki {
+  background: transparent !important;
+}
+
+/* shiki 多主题：根据 html.dark 切换 css 变量 */
+.shiki,
+.shiki span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+html.dark .shiki,
+html.dark .shiki span {
+  color: var(--shiki-dark) !important;
+  background-color: var(--shiki-dark-bg) !important;
+}
